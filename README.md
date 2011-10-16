@@ -1,9 +1,8 @@
 # node-libravatar
 
-PyLibravatar is an easy way to make use of the federated [Libravatar](http://www.libravatar.org)
-avatar hosting service from within your node.js applications.
-
-Inspired by [Emerson Macedo](http://codificando.com/)'s [Gravatar library](https://github.com/emerleite/node-gravatar).
+Here is an easy way to make use of the federated [Libravatar](http://www.libravatar.org)
+avatar hosting service from within your node.js applications. It is inspired by
+[Emerson Macedo](http://codificando.com/)'s [Gravatar library](https://github.com/emerleite/node-gravatar).
 
 See the [project page](https://github.com/fmarier/node-libravatar) for the issue tracker and downloads.
 
@@ -18,11 +17,11 @@ To install using npm, simply do this:
 To generate the correct avatar URL based on someone's email address, use the
 following:
 
-    >>> var libravatar = require('libravatar');
-    >>> libravatar.url(email='person@example.com', openid=null, { size: 96, default: 'mm' }, https=false,
-    >>>   function (avatar_url) {
-    >>>     console.log('<img src="' + avatar_url + '">');
-    >>>   });
+    var libravatar = require('libravatar');
+    libravatar.url(email='person@example.com', openid=null, { size: 96, default: 'mm' }, https=false,
+      function (avatar_url) {
+        console.log('<img src="' + avatar_url + '">');
+      });
 
 See the [Libravatar documentation](http://wiki.libravatar.org/api) for more
 information on the special values for the "default" parameter.
