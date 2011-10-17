@@ -26,7 +26,7 @@ following:
 See the [Libravatar documentation](http://wiki.libravatar.org/api) for more
 information on the special values for the "default" parameter.
 
-### License
+## License
 
 Copyright (C) 2011 Francois Marier <francois@libravatar.org>
 
