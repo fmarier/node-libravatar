@@ -19,7 +19,7 @@ following:
 
     var libravatar = require('libravatar');
     libravatar.url(email='person@example.com', openid=null, { size: 96, default: 'mm' }, https=false,
-      function (avatar_url) {
+      function (error, avatar_url) {
         console.log('<img src="' + avatar_url + '">');
       });
 
