@@ -1,2 +1,6 @@
+1.0.1 (2011-10-17):
+  - Add an error param to the callback
+  - Style improvements
+
 1.0.0 (2011-10-16)
   - Initial public release
