@@ -142,3 +142,23 @@ test("ordering of valid SRV hostnames on weight", function (t) {
     Math.random = original_random;
     t.end();
 });
+
+test("ordering of valid SRV hostnames on weight", function (t) {
+    var test1 = libravatar.service_name(null, false);
+    var exp1 = null;
+    t.equal(test1, exp1, 'degenerate case');
+
+    var test2 = libravatar.service_name('example.com', false);
+    var exp2 = '_avatars._tcp.example.com';
+    t.equal(test2, exp2, 'simple domain over http');
+
+    var test3 = libravatar.service_name('example.org', true);
+    var exp3 = '_avatars-sec._tcp.example.org';
+    t.equal(test3, exp3, 'simple domain over https');
+
+    var test4 = libravatar.service_name('example.co.nz', false);
+    var exp4 = '_avatars._tcp.example.co.nz';
+    t.equal(test4, exp4, 'longer domain over http');
+
+    t.end();
+});
