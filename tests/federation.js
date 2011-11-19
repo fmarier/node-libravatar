@@ -94,6 +94,9 @@ test("ordering of valid SRV hostnames on priority", function (t) {
 });
 
 test("ordering of valid SRV hostnames on weight", function (t) {
+    var original_random = Math.random;
+
+    Math.random = function () { return 0.6; };
     var test1 = libravatar.srv_hostname(new Array({name: 'a.example.org', port: 81, priority: 10, weight: 1},
                                                   {name: 'b.example.org', port: 82, priority: 10, weight: 5},
                                                   {name: 'c.example.org', port: 83, priority: 10, weight: 10},
@@ -102,6 +105,7 @@ test("ordering of valid SRV hostnames on weight", function (t) {
     var exp1 = new Array('d.example.org', 84);
     array_equal(t, test1, exp1, 'random 1');
 
+    Math.random = function () { return 0.2; };
     var test2 = libravatar.srv_hostname(new Array({name: 'a.example.org', port: 81, priority: 10, weight: 40},
                                                   {name: 'b.example.org', port: 82, priority: 10, weight: 0},
                                                   {name: 'c.example.org', port: 83, priority: 10, weight: 0},
@@ -109,13 +113,15 @@ test("ordering of valid SRV hostnames on weight", function (t) {
     var exp2 = new Array('a.example.org', 81);
     array_equal(t, test2, exp2, 'random 2');
 
+    Math.random = function () { return 0.4; };
     var test3 = libravatar.srv_hostname(new Array({name: 'a.example.org', port: 81, priority: 10, weight: 1},
                                                   {name: 'b.example.org', port: 82, priority: 10, weight: 0},
                                                   {name: 'c.example.org', port: 83, priority: 10, weight: 0},
                                                   {name: 'e.example.org', port: 85, priority: 10, weight: 0}));
-    var exp3 = new Array('b.example.org', 82);
+    var exp3 = new Array('e.example.org', 85);
     array_equal(t, test3, exp3, 'random 3');
 
+    Math.random = function () { return 0.3; };
     var test4 = libravatar.srv_hostname(new Array({name: 'a.example.org', port: 81, priority: 10, weight: 0},
                                                   {name: 'b.example.org', port: 82, priority: 10, weight: 0},
                                                   {name: 'c.example.org', port: 83, priority: 10, weight: 10},
@@ -123,6 +129,7 @@ test("ordering of valid SRV hostnames on weight", function (t) {
     var exp4 = new Array('c.example.org', 83);
     array_equal(t, test4, exp4, 'random 4');
 
+    Math.random = function () { return 0.8; };
     var test5 = libravatar.srv_hostname(new Array({name: 'a.example.org', port: 81, priority: 10, weight: 1},
                                                   {name: 'b.example.org', port: 82, priority: 10, weight: 5},
                                                   {name: 'c.example.org', port: 83, priority: 10, weight: 10},
@@ -132,5 +139,6 @@ test("ordering of valid SRV hostnames on weight", function (t) {
     var exp5 = new Array('e.example.org', 85);
     array_equal(t, test5, exp5, 'random 5');
 
+    Math.random = original_random;
     t.end();
 });
