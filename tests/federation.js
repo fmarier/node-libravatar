@@ -51,7 +51,7 @@ test("sanitization of valid SRV responses", function (t) {
 
     var test4 = libravatar.sanitized_target(new Array('example.org', 44300), true);
     var exp4 = 'example.org:44300';
-    t.equal(test2, exp2, 'weird https');
+    t.equal(test4, exp4, 'weird https');
 
     t.end();
 });
