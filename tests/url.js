@@ -10,6 +10,8 @@ var COMMON_EMAIL_DOMAIN = 'wherever.whichever';
 var COMMON_OPENID        = 'http://example.com/id';
 var COMMON_OPENID_HASH   = 'ce0064bb30c22b618f814c389e7941ce1bfff0659910523192868d2b71632c77';
 var COMMON_OPENID_DOMAIN = 'example.com';
+var COMMON_PREFIX_HTTP  = 'http://cdn.libravatar.org/avatar/';
+var COMMON_PREFIX_HTTPS = 'https://seccdn.libravatar.org/avatar/';
 
 function array_equal(t, result, expected, description) {
     t.equal(result[0], expected[0], description + ' [0]');
@@ -96,6 +98,34 @@ test("parsing of openid urls", function (t) {
     var test9 = libravatar.parse_user_identity(null, 'http://example.com/ID');
     var exp9 = new Array('ad8ce775cc12cba9bb8af26e00f55c473a3fcd3f554595a5ad9dd924a546a448', COMMON_OPENID_DOMAIN);
     array_equal(t, test9, exp9, 'uppercase path');
+
+    t.end();
+});
+
+test("parsing of openid urls", function (t) {
+    var test1 = libravatar.compose_avatar_url('', '', '', false);
+    var exp1 = COMMON_PREFIX_HTTP;
+    t.equal(test1, exp1, 'degenerate http case');
+
+    var test2 = libravatar.compose_avatar_url('', '', '', true);
+    var exp2 = COMMON_PREFIX_HTTPS;
+    t.equal(test2, exp2, 'degenerate https case');
+
+    var test3 = libravatar.compose_avatar_url('', 'deadbeef', '', false);
+    var exp3 = COMMON_PREFIX_HTTP + 'deadbeef';
+    t.equal(test3, exp3, 'simple http hash');
+
+    var test4 = libravatar.compose_avatar_url('avatar.example.com', 'deadbeef', '', false);
+    var exp4 = 'http://avatar.example.com/avatar/deadbeef';
+    t.equal(test4, exp4, 'federated http hash');
+
+    var test5 = libravatar.compose_avatar_url('avatar.example.com', 'deadbeef', '?s=24', true);
+    var exp5 = 'https://avatar.example.com/avatar/deadbeef?s=24';
+    t.equal(test5, exp5, 'federated https hash with size');
+
+    var test6 = libravatar.compose_avatar_url('', '12345678901234567890123456789012', '?d=404', true);
+    var exp6 = COMMON_PREFIX_HTTPS + '12345678901234567890123456789012?d=404';
+    t.equal(test6, exp6, 'common https hash with default');
 
     t.end();
 });
