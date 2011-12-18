@@ -1,6 +1,6 @@
 test:
 	json_verify < package.json
-	node_modules/tap/bin/tap.js tests/*.js
+	./node_modules/.bin/tap tests/*.js
 
 announce:
 	interactive-freecode-submit node-libravatar
