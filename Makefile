@@ -1,5 +1,5 @@
 test:
-	json_verify < package.json
+	./node_modules/.bin/jsonlint < package.json
 	./node_modules/.bin/tap tests/*.js
 
 announce:

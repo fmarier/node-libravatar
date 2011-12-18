@@ -15,7 +15,8 @@
     "url": "git://github.com/fmarier/node-libravatar.git"
   },
   "devDependencies": {
-    "tap": ">= 0.1.x"
+    "tap": ">= 0.1.x",
+    "jsonlint": ">= 1.3.x"
   },
   "engines": {
     "node": ">=0.4.3"
