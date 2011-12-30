@@ -1,7 +1,3 @@
-test:
-	./node_modules/.bin/jsonlint < package.json > /dev/null
-	./node_modules/.bin/tap tests/*.js
-
 announce:
 	interactive-freecode-submit node-libravatar
 
