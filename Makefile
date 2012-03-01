@@ -1,3 +1,5 @@
+all:
+
 announce:
 	interactive-freecode-submit node-libravatar
 
