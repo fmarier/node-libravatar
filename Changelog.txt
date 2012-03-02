@@ -1,3 +1,7 @@
+1.1.1 (2012-03-02):
+  - Minor code cleanups from Andy Chilton
+  - Add missing dev dependency on tap
+
 1.1.0 (2011-11-20):
   - Fix federation if more than one SRV record is present
   - Fix bugs in parameter validation and URL normalization

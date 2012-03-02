@@ -7,7 +7,7 @@
     "federated",
     "package.json"
   ],
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "Francois Marier <francois@libravatar.org> (http://fmarier.org)",
   "homepage": "https://github.com/fmarier/node-libravatar",
   "repository": {
