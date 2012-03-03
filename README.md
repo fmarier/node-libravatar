@@ -18,7 +18,7 @@ To generate the correct avatar URL based on someone's email address, use the
 following:
 
     var libravatar = require('libravatar');
-    libravatar.url(email='person@example.com', openid=null, { size: 96, default: 'mm' }, https=false,
+    libravatar.url('person@example.com', null, { size: 96, default: 'mm' }, false,
       function (error, avatar_url) {
         console.log('<img src="' + avatar_url + '">');
       });
