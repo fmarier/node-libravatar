@@ -6,11 +6,15 @@ avatar hosting service from within your node.js applications. It is inspired by
 
 See the [project page](https://github.com/fmarier/node-libravatar) for the issue tracker and downloads.
 
+[![Build Status](https://travis-ci.org/fmarier/node-libravatar.png)](https://travis-ci.org/fmarier/node-libravatar)
+
 ## Instalation
 
 To install using npm, simply do this:
 
     $ npm install libravatar
+
+[![NPM](https://nodei.co/npm/libravatar.png)](https://nodei.co/npm/libravatar/)
 
 ## Usage
 
