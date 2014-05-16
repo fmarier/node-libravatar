@@ -7,6 +7,8 @@ avatar hosting service from within your node.js applications. It is inspired by
 See the [project page](https://github.com/fmarier/node-libravatar) for the issue tracker and downloads.
 
 [![Build Status](https://travis-ci.org/fmarier/node-libravatar.png)](https://travis-ci.org/fmarier/node-libravatar)
+[![Dependencies Status](https://david-dm.org/fmarier/node-libravatar.png)](https://david-dm.org/fmarier/node-libravatar)
+[![Dev Dependencies Status](https://david-dm.org/fmarier/node-libravatar/dev-status.png)](https://david-dm.org/fmarier/node-libravatar#info=devDependencies)
 
 ## Instalation
 
