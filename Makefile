@@ -1,8 +1,5 @@
 all:
 
-announce:
-	interactive-freecode-submit node-libravatar
-
 test:
 	@( test -x /usr/bin/json_verify && json_verify < package.json ) || true
 	npm test
