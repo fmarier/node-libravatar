@@ -23,11 +23,11 @@ To install using npm, simply do this:
 To generate the correct avatar URL based on someone's email address, use the
 following:
 
-    var libravatar = require('libravatar');
-    libravatar.url({ email: 'person@example.com', size: 96, default: 'mm', https: false },
-      function (error, avatar_url) {
-        console.log('<img src="' + avatar_url + '">');
-      });
+    const libravatar = require('libravatar')
+    ...
+    const getLibravatar = async () => {
+      const avatar_url = await libravatar.get_avatar_url({ email: 'person@example.com', size: 96, default: 'mm', https: false })
+    }
 
 See the [Libravatar documentation](http://wiki.libravatar.org/api) for more
 information on the special values for the "default" parameter.
