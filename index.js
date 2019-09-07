@@ -1,1 +1,1 @@
-module.exports = require('./lib/libravatar');
+module.exports = require('./lib/libravatar')
