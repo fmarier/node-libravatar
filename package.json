@@ -1,24 +1,27 @@
 {
-  "name": "libravatar",
-  "description": "Libravatar node.js library",
+  "name": "libravatar-test",
+  "description": "Libravatar Node.js library",
   "keywords": [
     "libravatar",
     "avatar",
     "federated",
     "package.json"
   ],
-  "version": "3.0.0",
-  "author": "Francois Marier <francois@libravatar.org> (http://fmarier.org)",
-  "homepage": "https://github.com/fmarier/node-libravatar",
+  "version": "1.0.0",
+  "author": "Colby Thomas <coloradocolby@gmail.com> (https://colby.sh)",
+  "contributors": [
+    "Colby Thomas <coloradocolby@gmail.com> (https://colby.sh)",
+    "Francois Marier <francois@libravatar.org> (https://fmarier.org)",
+    "Andrew Chilton <andychilton@gmail.com> (https://chilts.org)"
+  ],
+  "homepage": "https://github.com/coloradocolby/node-libravatar",
   "repository": {
     "type": "git",
-    "url": "git://github.com/fmarier/node-libravatar.git"
+    "url": "git://github.com/coloradocolby/node-libravatar.git"
   },
+  "license": "MIT",
   "devDependencies": {
     "tap": ">= 0.1.x"
-  },
-  "engines": {
-    "node": ">=0.4.3"
   },
   "scripts": {
     "test": "tap tests/*.js"

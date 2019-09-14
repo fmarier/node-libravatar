@@ -3,4 +3,4 @@ node_js:
   - node # latest stable node release
 notifications:
   email:
-    - francois@libravatar.org
+    - coloradocolby@gmail.com
