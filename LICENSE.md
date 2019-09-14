@@ -1,6 +1,7 @@
 
 MIT License
 
+Copyright (c) 2011, 2012 Francois Marier <francois@libravatar.org> (https://fmarier.org)
 Copyright (c) 2019 Colby Thomas <coloradocolby@gmail.com> (https://colby.sh)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
