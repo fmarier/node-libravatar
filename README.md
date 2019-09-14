@@ -9,7 +9,7 @@ See the [project page](https://github.com/coloradocolby/node-libravatar) for the
 [![Build Status](https://travis-ci.org/coloradocolby/node-libravatar.png)](https://travis-ci.org/coloradocolby/node-libravatar)
 [![Dependencies Status](https://david-dm.org/coloradocolby/node-libravatar.png)](https://david-dm.org/coloradocolby/node-libravatar)
 [![Dev Dependencies Status](https://david-dm.org/coloradocolby/node-libravatar/dev-status.png)](https://david-dm.org/coloradocolby/node-libravatar#info=devDependencies)
-[![MIT liscense](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/coloradocolby/node-libravatar/blob/master/LICENSE.md)
+[![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/coloradocolby/node-libravatar/blob/master/LICENSE.md)
 
 ## Installation
 
