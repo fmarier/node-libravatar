@@ -1,3 +1,5 @@
+# THIS REPO HAS BEEN SUPERSEDED BY https://github.com/coloradocolby/node-libravatar
+
 # node-libravatar
 
 Here is an easy way to make use of the federated [Libravatar](http://www.libravatar.org)
